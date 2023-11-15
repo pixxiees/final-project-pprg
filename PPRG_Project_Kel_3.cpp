@@ -85,6 +85,8 @@ int main()
              << endl;
     }
 
+    sort_siswa(jumlah_pendaftar);
+
     system("CLS");
     int menu;
     cout << "--------------------------------------------------------------------------------" << endl;
@@ -97,8 +99,6 @@ int main()
          << endl;
     cout << "Menu dipilih: ";
     cin >> menu;
-
-    sort_siswa(jumlah_pendaftar);
 
     system("CLS");
     if (menu == 1)
@@ -124,7 +124,7 @@ int main()
         cout << "Nama pendaftar: ";
         cin.ignore();
         getline(cin, pendaftar);
-        for (int i = 1; i <= jumlah_pendaftar; i++)
+        for (int i = 1; i <= jumlah_kuota; i++)
         {
             if (biodata[i].nama == pendaftar)
             {
